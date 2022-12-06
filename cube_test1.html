@@ -1,0 +1,20 @@
+<!DOCTYPE html> <!-- ドキュメントタイプ宣言 -->
+<html lang="ja"> <!-- 言語を指定 -->
+<head>
+	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+	<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body style='margin:0px; overflow:hidden;'>
+	<a-scene embedded arjs>
+	<!-- ココに実際のシステムの挙動を追加する -->
+		<a-marker preset="hiro">
+		<!-- 使用するオブジェクトを記述する -->
+			<a-box position="0 1 0" ></a-box>
+			<a-text value="テスト" position="0 0 0" align="center"></a-text>
+		</a-marker>
+
+		<a-entity camera></a-entity>
+
+	</a-scene>
+</body>
+</html> <!-- 閉じる -->
