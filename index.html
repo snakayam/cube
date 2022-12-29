@@ -1,0 +1,29 @@
+<!DOCTYPE html> <!-- ドキュメントタイプ宣言 -->
+<html lang="ja"> <!-- 言語を指定 -->
+<head>
+	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+	<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body style='margin:0px; overflow:hidden;'>
+	<a-scene embedded arjs>
+	<!-- ココに実際のシステムの挙動を追加する -->
+		<a-marker preset="hiro">
+		<!-- 使用するオブジェクトを記述する -->
+			<!-- 名刺の画像を準備 -->
+			<a-assets>
+				<img id="front" src="curry.jpeg"/>
+			</a-assets>
+			
+			<a-plane
+				position="0 .75 0"
+				rotation="0 0 0"
+				width="1.75"
+				material="src: #front;">
+			</a-plane>
+		</a-marker>
+
+		<a-entity camera></a-entity>
+
+	</a-scene>
+</body>
+</html> <!-- 閉じる -->
