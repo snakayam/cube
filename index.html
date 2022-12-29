@@ -10,6 +10,7 @@
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   <!-- AR.js読み込み -->
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 
 </head>
 <body style="margin : 0px; overflow: hidden;">
@@ -20,11 +21,11 @@
   <a-scene embedded vr-mode-ui="enabled:false;" arjs="debugUIEnabled:true; detectionMode: mono_and_matrix; matrixCodeType: 3x3; patternRatio:0.6">
     <!-- 名刺の画像を準備 -->
     <a-assets>
-      <img id="front" src="curry.jpeg" />
+      <img id="front" src="curry.png" />
     </a-assets>
     
     <!-- マーカーのタグの中に表示させたいオブジェクトをマークアップする -->
-    <a-marker type="pattern" url="data/hiro.patt">
+    <a-marker preset="hiro">
       <a-plane
         position="0 .75 0" 
         rotation="0 0 0"
