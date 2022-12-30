@@ -6,3 +6,9 @@
   justify-content: center;
   box-sizing:border-box;
 }
+
+.AR{
+  position: relative;
+  top: 400px; 
+  left: 400px;
+}
