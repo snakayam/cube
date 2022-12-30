@@ -7,22 +7,36 @@
 <body style='margin:0px; overflow:hidden;'>
 	<a-scene embedded arjs>
 	<!-- ココに実際のシステムの挙動を追加する -->
-    <a-assets>
-      <img id="front" src="curry.jpeg"/>
-    </a-assets>
-		<a-marker preset="hiro">
-		<!-- 使用するオブジェクトを記述する -->
-			<a-plane
-				position="0 .75 0"
-				rotation="-90 0 0"
-				width="1.75"
-				material="src: #front;">
-			</a-plane>
-			<a-text value="テスト" position="0 0 0" align="center"></a-text>
-		</a-marker>
+	<a-assets>
+		<img id="front" src="curry.jpeg"/>
+	</a-assets>
+	<a-marker preset="hiro">
+	<!-- 使用するオブジェクトを記述する -->
+		<a-plane
+			position="0 .75 0"
+			rotation="-90 0 0"
+			width="1.75"
+			material="src: #front;">
+		</a-plane>
+		<a-text value="テスト" position="0 0 0" align="center"></a-text>
+	</a-marker>
 
-		<a-entity camera></a-entity>
-
+	<a-entity camera></a-entity>
+	
+	<!-- Google  -->
+	<form method=get action="http://www.google.co.jp/search">
+	<table bgcolor="#FFFFFF"><tr><td>
+	<a href="http://www.google.co.jp/">
+	<img src="http://www.google.com/logos/Logo_40wht.gif" border="0" alt="Google" align="absmiddle"></a>
+	<input type=text name=q size=31 maxlength=255 value="">
+	<input type=hidden name=ie value=UTF-8>
+	<input type=hidden name=oe value=UTF-8>
+	<input type=hidden name=hl value="ja">
+	<input type=submit name=btnG value="Google 検索">
+	</td></tr></table>
+	</form>
+	<!-- Google -->
+		
 	</a-scene>
 </body>
 </html> <!-- 閉じる -->
